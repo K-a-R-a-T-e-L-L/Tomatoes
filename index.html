@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Томаты на ветке - описание и характеристики</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="main__content">
+            <nav class="main__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--active" id="nav-description">ОПИСАНИЕ</li>
+                    <li class="nav__item" id="nav-reviews">ОТЗЫВЫ</li>
+                    <li class="nav__item" id="nav-from">ОТКУДА?</li>
+                </ul>
+            </nav>
+
+            <div class="main__page main__page--description">
+                <div class="product-description">
+                    <p class="product-description__text">
+                        Томаты на ветке красные (помидоры) - более плотные, яркие и ароматные по сравнению с обычными.
+                        Они славятся низкой калорийностью и высоким содержанием витаминов,
+                        клетчатки, пектина и минеральных веществ. В них содержатся также каротиноиды, кислоты и мощный
+                        антиоксидант ликопин.
+                    </p>
+                    <br>
+                    <p class="product-description__text">
+                        Помидор - незаменимый продукт в мировой кулинарии. Он - основа многочисленных соусов, маринадов,
+                        кетчупа, испанского холодного супа Гаспачо или итальянской закуски Капрезе. С ним делают салаты,
+                        его
+                        тушат, солят и консервируют. Помидоры на веточке особенно красиво смотрятся в запеченном виде.
+                    </p>
+                </div>
+
+                <div class="product-specs">
+                    <template id="specifications-template">
+                        <div class="product-specs__group">
+                            <h4 class="product-specs__title"></h4>
+                        </div>
+                    </template>
+                </div>
+
+                <h2 class="related-products__title">С этим товаром покупают</h2>
+
+                <div class="related-products">
+                    <template id="template-product-card">
+                        <div class="product-card">
+                            <div class="product-card__image-wrap">
+                                <img class="product-card__image" src="" alt="Изображение товара">
+                            </div>
+                            <button class="product-card__cart-btn"></button>
+                            <h5 class="product-card__title"></h5>
+                            <p class="product-card__manufacturer"></p>
+                            <p class="product-card__price"> <span class="product-card__price-unit">/ 0,93 л</span> </p>
+                            <div class="product-card__rating">
+                                <div class="product-card__star"></div>
+                                <div class="product-card__star"></div>
+                                <div class="product-card__star"></div>
+                                <div class="product-card__star"></div>
+                                <div class="product-card__star"></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="main__page main__page--reviews">
+                <p class="reviews__description">
+                    Помогите нам стать ещё лучше. Оставляя отзывы, вы таким образом указываете нам на зоны роста. Мы
+                    правда, читаем все отзывы.
+                </p>
+                <button class="reviews__btn">Оставить отзыв</button>
+            </div>
+
+            <div class="main__page main__page--from">
+                <div class="supplier-info">
+                    <div class="supplier-info__description">
+                        <p class="supplier-info__text">
+                            <b>Томаты на ветке красные</b> (помидоры) - более плотные, яркие и ароматные по сравнению с
+                            обычными.
+                            Они славятся низкой калорийностью и высоким содержанием витаминов, клетчатки, пектина и
+                            минеральных
+                            веществ. В них содержатся также каротиноиды, кислоты и мощный антиоксидант ликопин.
+                        </p>
+                        <br>
+                        <p class="supplier-info__text">
+                            Помидор - незаменимый продукт в мировой кулинарии. Он - основа многочисленных соусов,
+                            маринадов,
+                            кетчупа, испанского холодного супа Гаспачо или итальянской закуски Капрезе.
+                        </p>
+                    </div>
+
+                    <div class="supplier-info__provider">
+                        <h3 class="supplier-info__name">Наталья и Юрий Лейшан</h3>
+                        <img src="./images/provider.png" alt="Фото поставщиков" class="supplier-info__photo">
+                        <button class="supplier-info__btn">Сертификаты</button>
+                        <button class="supplier-info__btn">О поставщике</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

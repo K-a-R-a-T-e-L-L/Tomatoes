@@ -1,0 +1,466 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    border-width: 2px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* Блок main */
+.main {
+    width: 100%;
+    max-width: 1440px;
+    height: 1066px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.main__content {
+    width: 80%;
+    max-width: 1066px;
+    height: calc(100% - 32px);
+}
+
+/* Навигация */
+.main__nav {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #b2b2b2;
+    display: grid;
+    place-items: center;
+}
+
+.nav__list {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    column-gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav__item {
+    position: relative;
+    font-family: 'Montserrat-SemiBold';
+    font-weight: 600;
+    color: #444444;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Анимация для активного элемента навигации */
+@keyframes underlineAppear {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 115%;
+    }
+}
+
+.nav__item--active {
+    color: #141414;
+}
+
+.nav__item--active::after {
+    content: "";
+    width: 115%;
+    height: 4px;
+    background-color: #429F3A;
+    position: absolute;
+    bottom: 0;
+    left: -7.5%;
+    border-radius: 5px;
+    animation: 0.2s underlineAppear ease-in-out;
+}
+
+/* Страница с описанием товара */
+.main__page--description {
+    display: block;
+}
+
+.product-description {
+    margin-top: 53.5px;
+    height: auto;
+}
+
+.product-description__text {
+    line-height: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat-Light';
+    color: #444444;
+}
+
+/* Спецификации товара */
+.product-specs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 5px;
+    margin-top: 20px;
+}
+
+.product-specs__group {
+    margin-top: 30px;
+    height: 173px;
+    width: 484px;
+}
+
+.product-specs__group:last-of-type {
+    margin-top: 10px;
+    height: 140px;
+}
+
+.product-specs__title {
+    font-family: 'Montserrat-Medium';
+    color: #444444;
+    height: 30px;
+}
+
+.product-specs__item {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px #b2b2b2 solid;
+}
+
+.product-specs__property,
+.product-specs__value {
+    font-size: 12px;
+    font-family: 'Montserrat-Light';
+    color: #444444;
+}
+
+/* Рекомендуемые товары */
+.related-products {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.related-products__title {
+    font-size: 22px;
+    font-family: 'Montserrat-Medium';
+    color: #444444;
+    margin-bottom: 25px;
+}
+
+.product-card {
+    min-width: 250px;
+    min-height: 381px;
+    max-width: 250px;
+    max-height: 381px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #b2b2b2;
+    position: relative;
+}
+
+.product-card__image-wrap {
+    height: 235px;
+    width: 100%;
+}
+
+.product-card__cart-btn {
+    width: 60px;
+    height: 36px;
+    border-radius: 33px 0 0 33px;
+    background-color: #429F3A;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    background-image: url(./images/cart.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: 0;
+}
+
+.product-card__title {
+    color: #424141;
+    font-family: 'Montserrat-Medium';
+    margin: 12px 0 0 12px;
+    font-size: 14px;
+}
+
+.product-card__manufacturer {
+    color: #89817F;
+    font-family: 'Montserrat-Light';
+    font-size: 12px;
+    margin: 5px 0 0 12px;
+}
+
+.product-card__price {
+    font-family: 'Montserrat-Medium';
+    font-size: 20px;
+    margin: 25px 0 0 12px;
+}
+
+.product-card__price-unit {
+    font-size: 12px;
+    color: #424141;
+    font-family: 'Montserrat-Light';
+}
+
+.product-card__rating {
+    display: flex;
+    width: 85px;
+    justify-content: space-evenly;
+    margin: 10px 0 0 12px;
+}
+
+.product-card__star {
+    width: 15px;
+    height: 15px;
+    background-image: url(./images/star.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Страница отзывов */
+.main__page--reviews {
+    height: 200px;
+}
+
+.reviews__description {
+    width: 525px;
+    height: 40px;
+    font-size: 14px;
+    color: #444444;
+    font-family: 'Montserrat-Light';
+    margin-top: 50px;
+}
+
+.reviews__btn {
+    background-color: #429F3A;
+    height: 40px;
+    width: 185px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat-Medium';
+    border-radius: 5px;
+    margin-top: 25px;
+    border: 0;
+}
+
+/* Страница информации о поставщике */
+.supplier-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.supplier-info__description {
+    width: 510px;
+    font-size: 14px;
+    color: #444444;
+    font-family: 'Montserrat-Light';
+}
+
+.supplier-info__provider {
+    width: 376px;
+    height: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.supplier-info__name {
+    display: none;
+}
+
+.supplier-info__photo {
+    position: relative;
+    top: -5px;
+}
+
+.supplier-info__btn {
+    width: 177px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #043E44;
+    font-size: 14px;
+    color: #043E44;
+    font-family: 'Montserrat-Medium';
+    position: relative;
+    top: -10px;
+}
+
+/* Адаптивные стили */
+@media (width < 1235px) {
+    .main {
+        height: auto;
+    }
+
+    .product-specs__group {
+        margin-top: 10px;
+    }
+}
+
+@media (width < 1120px) {
+    .supplier-info__provider {
+        position: relative;
+        margin-top: 70px;
+    }
+
+    .supplier-info__name {
+        display: block;
+        position: absolute;
+        top: -10%;
+        left: 0;
+    }
+}
+
+@media (width < 700px) {
+    .main__page--reviews {
+        display: grid;
+        place-items: center;
+        width: 100%;
+    }
+
+    .reviews__description {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .reviews__btn {
+        margin-top: 30px;
+    }
+}
+
+@media (width < 500px) {
+    .main__content {
+        width: 90%;
+        overflow: hidden;
+        height: calc(100% - 16px);
+    }
+
+    .product-description {
+        margin-top: 30px;
+    }
+
+    .main__nav {
+        height: 30px;
+    }
+
+    .nav__item {
+        font-size: 12px;
+    }
+
+    .product-specs__group {
+        width: 100%;
+    }
+
+    .related-products {
+        width: calc(288 * 4);
+        height: 220px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-bottom: 50px;
+    }
+
+    .product-card {
+        min-width: 288px;
+        max-width: 288px;
+        min-height: 190px;
+        max-height: 190px;
+    }
+
+    .product-card__image-wrap {
+        width: 100px;
+        height: 95px;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-top: 10%;
+        margin-left: 5px;
+    }
+
+    .product-card__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-card__title {
+        margin: -90px 0 0 110px;
+    }
+
+    .product-card__manufacturer {
+        margin-left: 110px;
+    }
+
+    .product-card__price {
+        margin-left: 180px;
+    }
+
+    .product-card__rating {
+        display: none;
+    }
+
+    .product-card__cart-btn {
+        width: 160px;
+        height: 45px;
+        background-image: url(./images/add_cart.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 127px 18px;
+        background-color: white;
+        border: 1px solid #DEDEDE;
+        margin-right: 18px;
+        border-radius: 5px;
+    }
+
+    .supplier-info__provider {
+        width: 100%;
+    }
+
+    .supplier-info__photo {
+        width: 100%;
+        max-height: 230px;
+        max-width: 310px;
+    }
+
+    .supplier-info__btn {
+        margin-top: -70px;
+        width: 48%;
+        height: 35px;
+    }
+}
+
+@media (width < 400px) {
+    .supplier-info__name {
+        top: -5%;
+    }
+}
